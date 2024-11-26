@@ -1,0 +1,186 @@
+/* Global Styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #e0f7fa 30%,
+    #80deea 100%
+  ); /* Soft gradient background */
+  color: #333; /* Neutral text color for better readability */
+  font-size: 16px; /* Increased base font size for better readability */
+}
+
+/* Video Interview Styles */
+.video-interview {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Slight transparency for a softer look */
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 15px; /* More rounded corners for a softer look */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  max-width: 800px; /* Limit max width for larger screens */
+  margin: auto; /* Center the component */
+}
+
+/* Dark Mode Styles */
+.video-interview.dark-mode {
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for better contrast */
+}
+
+.video-interview.dark-mode .emotion-heading,
+.video-interview.dark-mode h4,
+.video-interview.dark-mode p {
+  color: #ffffff; /* Light text for headings and content in dark mode */
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Increased padding for buttons */
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space below the button */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Video Container */
+.video-container {
+  display: flex;
+  justify-content: center; /* Center the video container */
+}
+
+.video {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Responsive width */
+}
+
+/* Emotion Content */
+.emotion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emotion-heading {
+  font-size: 28px; /* Slightly larger for emphasis */
+  font-weight: bold;
+  color: #011b1e;
+}
+
+/* Button Container Styles */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px; /* Increased padding for buttons */
+  margin-top: 12px; /* Vertical margin between buttons */
+  background-color: #0357de;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 45px;
+}
+
+button:hover {
+  background-color: #0347b3;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) -2px -2px, rgba(255, 255, 255, 0.2) -4px -4px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions on hover effects */
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button[disabled] {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Pie Chart Container */
+.pie-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Right Content Alignment */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Text Styles */
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Feedback Report Styles */
+.feedback-report {
+  margin-top: 20px; /* Space above feedback report section */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Light border above feedback report for separation*/
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .video-interview {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .video-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  .pie-chart-container {
+    width: 80%;
+    height: auto;
+  }
+}
